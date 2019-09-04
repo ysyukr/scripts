@@ -1,0 +1,1 @@
+nohup /usr/bin/masterha_manager --conf=/etc/masterha_default.cnf --ignore_last_failover < /dev/null > /usr/local/managerha/log/mha.log 2>&1 &

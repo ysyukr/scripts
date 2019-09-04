@@ -1,0 +1,5 @@
+server_id=1
+skip-name-resolve
+log-bin=/var/lib/mysql/mysql-bin
+relay-log=/var/lib/mysql/mysql-relay-bin
+relay-log-index/var/lib/mysql/mysql-relay-bin.index
