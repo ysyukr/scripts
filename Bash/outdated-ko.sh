@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "This script is for checking outdated files of Korean team."
-This script must be run from the website folder."
+echo "This script must be run from the website folder."
 
 rm -rf ./outdated-ko.txt
 rm -rf ./outdated-en.txt
