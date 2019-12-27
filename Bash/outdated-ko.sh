@@ -19,13 +19,13 @@ echo "Check for differences between branches with the git diff command."
 
 git diff --name-only upstream/"$prebranch" upstream/"$currbranch" -- content/en/docs >> outdated-en.txt
 
-sed -e 's/content\/en/content\/ko/g' outdated-en.txt > outdated-en.txt.tmp
-
-mv outdated-en.txt.tmp outdated-en.txt
-
 find content/ko/docs >> docs-ko.txt
 
-comm -12 outdated-en.txt docs-ko.txt >> outdated-ko.txt
+sed -e 's/content\/ko/content\/en/g' docs-ko.txt > docs-en.txt.tmp
+
+mv docs-en.txt.tmp docs-en.txt
+
+comm -12 outdated-en.txt docs-en.txt >> outdated-ko.txt
 
 rm -rf ./outdated-en.txt
 rm -rf ./docs-ko.txt
