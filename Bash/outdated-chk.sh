@@ -31,3 +31,5 @@ rm -rf ./outdated-en.txt
 rm -rf ./docs-ko.txt
 
 echo "Check the contents of the outdated-ko.txt file."
+
+cat outdated-ko.txt
