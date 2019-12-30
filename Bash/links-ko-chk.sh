@@ -1,7 +1,9 @@
 #!/bin/bash
 
 echo "This script checks for reference links in newly added documents."
+echo "This script must be run outside the website folder."
 
+cd website
 rm -rf ./links-ko.txt
 rm -rf ./links-ko-chk.txt
 
@@ -20,10 +22,10 @@ mv links-ko.txt.tmp links-ko.txt
 while read path
 do
     grep -n -r "$path" content/ko/docs
-done < links-ko.txt >> links-ko-chk.txt
+done < links-ko.txt >> ../links-ko-chk.txt
 
 rm -rf ./links-ko.txt
 
 echo "Please check the links-ko-chk.txt file and correct the link."
 
-cat links-ko-chk.txt
+cat ../links-ko-chk.txt
